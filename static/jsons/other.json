@@ -1,6 +1,20 @@
 {
 	"other":[
 			{"songName":"说散就散","hash":"F09D43EB7279305126508BEDAFB88550"},
-			{"songName":"下雨了", "hash":"928BA6597476E1D9DF06EA425CE43131"}
+			{"songName":"下雨了", "hash":"928BA6597476E1D9DF06EA425CE43131"},
+			{"songName":"枫","hash":"d7683677f312183488e8f3fdc54673bc"},
+			{"songName":"等我回家","hash":"da724ddb9abe82020b256ca6269e1d86"},
+			{"songName":"Going Down This Road","hash":"aaef84f3ede694ab3c8a136635e6c038"},
+			{"songName":"with you","hash":"048858f7f78e401955650d77cfb4988c"},
+			{"songName":"阳光不锈","hash":"68f148e4d1a55e797666bcea0725272d"},
+			{"songName":"萤火","hash":"7bd6779327fd7db97bbcb185961376b3"},
+			{"songName":"是你","hash":"2c1e1ef7233c02288f8bade22a798d4e"},
+			{"songName":"来日方长","hash":"c4ba9f2f18ab1f233a951f5c2e77b0ea"},
+			{"songName":"消愁","hash":"4f76587a5b0b93eef15883e54dd3e2db"},
+			{"songName":"谁","hash":"9728e4b5a98149f96cf34844c7151f74"},
+			{"songName":"如果","hash":"8de4fbe7f430761a27f127242bcda39f"},
+			{"songName":"听不到","hash":"cd47457d734c6e17daa291007a04a6cc"},
+			{"songName":" Opera2","hash":"fa81e82c86cfcb0c84c13ab242771af1"},
+			{"songName":"一笑倾城","hash":"d0b1a97d2abb8d0cbec78e030cc7fd9f"}
 	]
 }
