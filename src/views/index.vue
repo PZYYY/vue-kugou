@@ -137,7 +137,7 @@
     }
      .nav{
 	   	 width: 100%;
-	   	 height: 5%;
+	   	 height:6%;
 	   	 clear:both;
 	   	 margin-top: 5rem;
    	}
@@ -148,6 +148,7 @@
 	   	 float: left;
 	   	 font-size: 1.7rem;
 	   	 text-align: center;
+	   	 padding-top:1.4rem;
    	} 
    	.Carousel{
    		width: 100%;

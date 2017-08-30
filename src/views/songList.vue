@@ -169,7 +169,7 @@
 		text-align: center;
 		list-style:none;
 		float:left;
-		font-size: 1.5rem;
+		font-size: 1.7rem;
 		margin:0rem 0.5rem;
 		color:#005151;
 	}

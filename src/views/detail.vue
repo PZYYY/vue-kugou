@@ -124,7 +124,7 @@
 		}
 	.imgs{
 		width:100%;
-		height:14rem;
+		height:17rem;
 		padding-left:1rem;
 		display:table-cell;
 	    vertical-align:middle;

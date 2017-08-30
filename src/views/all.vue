@@ -55,8 +55,8 @@
 		audio{
 		         float:right;
 		         width:80%;
-		         padding-right:1rem;
-		         padding-top:0.5rem; 
+		         padding-right:2rem;
+		         padding-top:0.4rem; 
 		}
 		
 	</style>
