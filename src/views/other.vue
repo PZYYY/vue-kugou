@@ -62,6 +62,7 @@ import {api} from '../global/api'
 					var listpage=this;
 				    this.$http.get(api.getOther).then(function(response){
 				    	listpage.list.songlist=response.data.other;
+				    	store.dispatch('com_detState',response.data.other)
 				    	// console.log(listpage.list.songlist);	
 				    },function(response){
 				    	console.log("抱歉，新歌列表请求失败了 T_T ")

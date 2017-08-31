@@ -62,6 +62,7 @@
 			var listpage=this;
 		    this.$http.get(api.getLove).then(function(response){
 		    	listpage.list.songlist=response.data.love;
+		    	store.dispatch('com_detState',response.data.love)
 		    	// console.log(listpage.list.songlist);	
 		    },function(response){
 		    	console.log("抱歉，新歌列表请求失败了 T_T ")

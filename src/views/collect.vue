@@ -50,11 +50,13 @@
 			},
 			loading:false,
 			value:"",
-			songSrc:""
+			songSrc:"",
+			myCollect:store.state.collect.myCollect
 		}
 	},
 	mounted:function(){
 		this.getData();
+		this.list.songlist.push(this.myCollect)
 	},
 	methods:{
 		//显示列表数据
@@ -62,6 +64,7 @@
 			var listpage=this;
 		    this.$http.get(api.getCollect).then(function(response){
 		    	listpage.list.songlist=response.data.collect;
+		    	store.dispatch('com_detState',response.data.collect)
 		    	console.log(listpage.list.songlist);	
 		    },function(response){
 		    	console.log("抱歉，新歌列表请求失败了 T_T ")

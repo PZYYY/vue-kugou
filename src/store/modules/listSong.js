@@ -11,7 +11,8 @@ const listSong={
 		//定义播放器的初始状态
 		audio:{ songUrl:'',
 				lyrics:'',
-				name:''
+				name:'',
+				Hash:''
 			}
 	},
 	mutations:{
@@ -19,6 +20,7 @@ const listSong={
 		 	state.audio.songUrl=newState.play_url;
 		 	state.audio.lyrics=newState.lyrics;
 		 	state.audio.name=newState.audio_name;
+		 	state.audio.Hash=newState.hash;
 		 }
 	},
 	actions:{

@@ -7,6 +7,9 @@ const getters = {
   	},
   	songs_get:state=>{
   		return state.songs.songs
+  	},
+  	collect_get:state=>{
+  		return state.collect.mycollect
   	}
     
 };

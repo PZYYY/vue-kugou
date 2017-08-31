@@ -139,7 +139,7 @@
 	   	 width: 100%;
 	   	 height:6%;
 	   	 clear:both;
-	   	 margin-top: 5rem;
+	   	 margin-top: 4rem;
    	}
     .nav ul li{
 	   	 width: 22%;

@@ -55,7 +55,6 @@
 			    	rankpage.list.ranksongsList=response.data.rankSongs; //json数据必须是对象 
 			    	//将json数据传入Vuex
 			    	store.dispatch('com_detState',response.data.rankSongs)
-			    	// console.log(rankpage.list.ranksongsList);	
 			    },function(response){
 			    	console.log("抱歉，新歌列表请求失败了 T_T ")
 			    });
