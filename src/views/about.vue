@@ -3,7 +3,8 @@
 	  <!-- 头部 -->
 		<div class="c">
 			<div class="top">
-				<router-link to="/all/index"><span><</span></router-link>
+				<router-link to="/index"><span><</span></router-link>
+				<!-- <span><</span> -->
 				<p>About薛之谦</p>
 			</div>
 		</div>
@@ -18,10 +19,10 @@
 			
 		</div>
 		</div>
-	 
+	   
 </template>
 <script>
- 
+
 </script>
 
 <style scoped>

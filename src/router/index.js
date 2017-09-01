@@ -15,28 +15,43 @@ Vue.use(Router)
 
 export default new Router({
   routes: [
-    {path: '/',
-     redirect: '/all/index',
-    },
     {
+      path: '/', redirect: '/index',
+    },
+   /*  {
         path:'/all',component:All,
       	children:[
-                  {path:'index',component:Index},
+                 {path:'index',component:Index},
                   {path:'rank',component:Rank},
                   {path:'songList',component:SongList},
                   {path:'other',component:Other},
                   {path:'collect',component:Collect},
                   {path:'love',component:Love}
         ]
-    },
-    
+    },*/
     {
-      path:'/detail',
-      component:Detail
+      path:'/index',component:Index
     },
     {
-      path:'/all/about',
-      component:About
+      path:'/rank',component:Rank
+    },
+    {
+      path:'/songList',component:SongList
+    },
+    {
+      path:'/collect',component:Collect
+    },
+    {
+      path:'/love',component:Love
+    },
+    {
+      path:'/other',component:Other
+    },
+    {
+      path:'/detail',component:Detail
+    },
+    {
+      path:'/about',component:About
     }
    
   ]

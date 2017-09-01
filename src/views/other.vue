@@ -5,9 +5,9 @@
 		<p>我好像在哪见过你</p>
 		<div class="nav">
 			 <ul>
-			 	<router-link to="/all/index"><li>首页</li></router-link>
-				<router-link to="/all/rank"><li>排行</li></router-link>
-				<router-link to="/all/songList"><li>歌单</li></router-link>
+			 	<router-link to="/index"><li>首页</li></router-link>
+				<router-link to="/rank"><li>排行</li></router-link>
+				<router-link to="/songList"><li>歌单</li></router-link>
 				<li>其他</li>
 			 </ul>
 		</div>
@@ -36,13 +36,15 @@
 		  </li>
 		</ul>
 	</div>
-	
+	<All></All>
 	</div>
 </template>
 <script>
 import store from '../store/index'
 import {api} from '../global/api'
+import All from './all'
 	 export default{
+	 	components:{ All }, 
 		data(){
 				return{
 					list:{

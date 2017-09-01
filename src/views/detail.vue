@@ -1,7 +1,7 @@
 <template>
 	<div class="d">
 		<div class="top">
-			<router-link to="/all/rank"><p @click="Back"><</p></router-link>
+			<router-link to="/rank"><p @click="Back"><</p></router-link>
 			<span v-model="songInf.name">{{songInf.name}}</span>
 		</div>
 		<div class="middle" v-model="songInf.lyrics">
@@ -12,11 +12,11 @@
 			<img src="../assets/images/love.png"  width="11%" id="love">
 		</div>
 		<div class="bottom">
-			<audio :src="songInf.songUrl" controls autoplay loop id="audio"></audio>
+			<audio :src="songInf.songUrl" controls autoplay id="audio"></audio>
 			<div class="imgs">
-				<img class="img1" src="../assets/images/last.png" width="20%" @click="last">
+				<img class="img1" src="../assets/images/last.png" width="15%" @click="last">
 				<img class="img2" src="../assets/images/stop.png" width="30%" @click="playPause">
-				<img class="img3" src="../assets/images/next.png" width="20%" @click="next">
+				<img class="img3" src="../assets/images/next.png" width="15%" @click="next">
 			</div>
 			
 		</div>
@@ -28,8 +28,8 @@
 	  name: 'app',
 	  data(){
 	    return{
-	    	songInf:store.state.listSong.audio,
-	    	songsjson:store.state.songs.songs,
+	    	songInf:store.state.listSong.audio, //需要用到的参数
+	    	songsjson:store.state.songs.songs,//列表中所有json数据
 	    	add:[],
 	    	collect:{
 	    		songName:store.state.listSong.audio.name,
@@ -38,7 +38,16 @@
 	    }
 	  },
 	  mounted:function(){
-	  	  document.getElementById("audio").currentTime = localStorage.getItem('currentTime')  //本地取值歌曲进度
+	  	  let that = this;
+	  	  document.getElementById("audio").currentTime=localStorage.getItem('currentTime');  //本地取值
+	  	  setInterval(function(){
+  	  		let currentTime = document.getElementById("audio").currentTime; //当前播放进度
+  	  		let totalTime = that.songInf.time;  //当前歌曲总时长
+  	  		//当前播放时间等于当前歌曲总时间时，为播放完毕，此时直接跳下一曲
+  	  		if(parseInt(currentTime) == parseInt(Number(totalTime)/1000) ){
+  	  			that.next()
+  	  		}
+  	  },1000)
 	  },
 	  methods:{
 	    playPause(){  //暂停播放
@@ -57,9 +66,6 @@
 	    	localStorage.setItem('currentTime',audio.currentTime);//本地存值
 	    },
 	    Collect(){
-	    	// document.getElementById('sc').setAttribute('src','../assets/images/love.png')
-	    	// document.getElementById('sc').src='../assets/images/love.png'
-	    	// var c=JSON.parse(JSON.stringify(this.collect))
 	    	var c=this.collect;
 	    	this.add.push(c);
 	    	store.dispatch('com_coState',this.add);
@@ -98,7 +104,7 @@
 			    },function(response){
 				    console.log("抱歉，新歌列表请求失败了 T_T ",response)
 			});		
-	    }
+	    },
 	  }
 	}
 </script>
@@ -169,7 +175,7 @@
 		display:table-cell;
 	    vertical-align:middle;
 	}
-    .img1,.img3{margin-bottom:1rem; }
+    .img1,.img3{margin-bottom:2rem; }
 	.img2{
 		margin-left: 2rem;
 		margin-right:2rem;

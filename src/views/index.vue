@@ -9,9 +9,9 @@
 		<div class="nav">
 	 		<ul>
 	  			    <li>首页</li>
-	  				<router-link to="/all/rank"><li>排行</li></router-link>
-	  				<router-link to="/all/songList"><li>歌单</li></router-link>
-	  				<router-link to="/all/other"><li>其他</li></router-link>
+	  				<router-link to="/rank"><li>排行</li></router-link>
+	  				<router-link to="/songList"><li>歌单</li></router-link>
+	  				<router-link to="/other"><li>其他</li></router-link>
 	  			 </ul>
 		</div>
 		<!-- 轮播 -->
@@ -24,20 +24,20 @@
 		</div>
 		<!-- 中间层 -->
 		<div class="content">
-			<router-link to="/all/songList">
+			<router-link to="/songList">
 		<div class="local">
 		    <img src="../assets/images/mysong.png" alt="" >
 			<span>本地音乐</span>
 		</div>
 			</router-link>
 		<div class="local2">
-		  <router-link to="/all/collect">
+		  <router-link to="/collect">
 			<div class="lo2">
 				<img src="../assets/images/co.png" alt="" >
 				<span>收藏</span>
 			</div>
 		</router-link>
-			<router-link to="/all/rank">
+			<router-link to="/rank">
 				<div class="lo2">
 					<img src="../assets/images/ph.png" alt="" >
 					<span>排行</span>
@@ -46,13 +46,13 @@
 			
 		</div>
 		<div class="local2">
-		  <router-link to="/all/love">
+		  <router-link to="/love">
 			<div class="lo2">
 				<img src="../assets/images/like.png" alt="" >
 				<span>我喜欢</span>
 			</div>
 		  </router-link>
-		  <router-link to="/all/about">
+		  <router-link to="/about">
 		  	<div class="lo2">
 		  		<img src="../assets/images/about.png" alt="" >
 		  		<span>关于他</span>
@@ -60,10 +60,13 @@
 		  </router-link>
 		</div>
 		</div>
+		<All></All>
 	</div>
 </template>
 <script>
+import All from './all'
 	export default{
+		components:{ All },
 		data(){
 			return{
 				Rolls:[],//轮播json数据

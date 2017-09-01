@@ -1,14 +1,15 @@
+	
 	<template>
 		<div>
 
-			<router-view></router-view>
+			<!-- <router-view></router-view> -->
 			<!-- 底部播放器 -->
 			<router-link to="/detail">
 			  <div class="bloser">
 			    <mt-tab-item>
 			      <img slot="icon" src="../assets/images/bottom.jpg" @click="detail">
 			    </mt-tab-item>
-			     <audio :src="songSrc.songUrl" controls autoplay loop id="myaudio"></audio>
+			     <audio :src="songSrc.songUrl" controls autoplay id="myaudio"></audio>
 			  </div>
 			</router-link>
 		</div>
@@ -29,8 +30,8 @@
 	 	   	  var myaudio=document.getElementById("myaudio");
 	 	   	  console.log(myaudio.currentTime)
 	 	   	  localStorage.setItem('currentTime',myaudio.currentTime)   //本地存储
-
 	 	   }
+ 	   		
 	 	}
 	 }
 		

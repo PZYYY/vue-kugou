@@ -2,7 +2,7 @@
 	<div class="r">
 			<!--返回键 搜索栏 -->
 		<div class="top">
-				<router-link to="/all/index"><mt-button><</mt-button></router-link>
+				<router-link to="/index"><mt-button><</mt-button></router-link>
 				<div @keyup.enter="search()" style="width:100%">
 					<mt-search
 					  v-model="value"
@@ -28,12 +28,15 @@
 			  </li>
 			</ul>
 		</div>
+		<All></All>
 	</div>
 </template>
 <script>
 	import store from '../store/index'
 	import {api} from '../global/api'
-	export default{  
+	import All from './all'
+	export default{ 
+		components:{ All }, 
 		data(){
 			return{
 				list:{
@@ -41,7 +44,8 @@
 				},
 				loading:false,
 				value:"",
-				songSrc:""
+				songSrc:"",
+				oneHash:""
 			}
 		},
 		// dataType: '
@@ -74,10 +78,10 @@
 			//播放
 			play(index){  //index为列表中的索引
 				var that=this;
-				var oneHash=this.list.ranksongsList[index].hash;
-				console.log("歌曲的hash：",oneHash)  //可拿到hash
+				this.oneHash=this.list.ranksongsList[index].hash;
+				console.log("歌曲的hash：",this.oneHash)  //可拿到hash
 				//jsonp 解决ajax跨域请求问题    this.axios.get
-				let url = '/yy/index.php?r=play/getdata&hash='+oneHash  //解决跨域问题
+				let url = '/yy/index.php?r=play/getdata&hash='+this.oneHash  //解决跨域问题
    				//http://www.kugou.com/yy/index.php?r=play/getdata&hash=DF3926E1293530EF351F52B9C2260BE7
 				this.$http.get(url).then(function(response){
 						console.log("response：",response);
@@ -89,7 +93,7 @@
 					    console.log("抱歉，新歌列表请求失败了 T_T ",response)
 				});
 			},
-			//删除
+			
 			del(index){
 				this.list.ranksongsList.splice(index,1)
 			},

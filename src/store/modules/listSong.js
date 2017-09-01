@@ -12,7 +12,8 @@ const listSong={
 		audio:{ songUrl:'',
 				lyrics:'',
 				name:'',
-				Hash:''
+				Hash:'',
+				time:''
 			}
 	},
 	mutations:{
@@ -21,6 +22,7 @@ const listSong={
 		 	state.audio.lyrics=newState.lyrics;
 		 	state.audio.name=newState.audio_name;
 		 	state.audio.Hash=newState.hash;
+		 	state.audio.time=newState.timelength;
 		 }
 	},
 	actions:{
