@@ -8,10 +8,10 @@
 			</div>
 			<div class="nav">
 				 <ul>
-				 	<router-link to="/index"><li>首页</li></router-link>
-					<router-link to="/rank"><li>排行</li></router-link>
-					<router-link to="/songList"><li>歌单</li></router-link>
-					<router-link to="/other"><li>其他</li></router-link>
+				 	<router-link to="/all/index"><li>首页</li></router-link>
+					<router-link to="/all/rank"><li>排行</li></router-link>
+					<router-link to="/all/songList"><li>歌单</li></router-link>
+					<router-link to="/all/other"><li>其他</li></router-link>
 				 </ul>
 			</div>
 			<mt-search
@@ -34,7 +34,7 @@
 			  </li>
 			</ul>
 		</div>
-		<All></All>
+		<!-- <All></All> -->
 		<!-- <p>歌单</p>
 		<router-link to="mine"><mt-button type="danger">歌单</mt-button></router-link> -->
 	</div> 
@@ -42,9 +42,9 @@
 <script>
  import store from '../store/index'
  import {api} from '../global/api'
- import All from './all'
+ // import All from './all'
  export default{
- 	components:{ All }, 
+ 	// components:{ All }, 
 	data(){
 		return{
 			list:{
@@ -143,7 +143,7 @@
 		 list-style:none;
 		 float:left;
 		 font-size: 1.7rem;
-		 margin:0rem 1.6rem;
+		 margin:0rem 2rem;
 		 color:#005151;	
 	}
 	.mint-search {clear: both;
@@ -166,7 +166,7 @@
 	}
 	.list ul li{
 		width:100%;
-		height:3rem;
+		height:3.5rem;
 		list-style:none;
 		border-bottom:0.5px solid #929292;
 		text-align:left;

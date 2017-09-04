@@ -1,7 +1,7 @@
 <template>
 	<div class="d">
 		<div class="top">
-			<router-link to="/rank"><p @click="Back"><</p></router-link>
+			<router-link to="/all/rank"><p @click="Back"><</p></router-link>
 			<span v-model="songInf.name">{{songInf.name}}</span>
 		</div>
 		<div class="middle" v-model="songInf.lyrics">
@@ -37,17 +37,24 @@
 	    	}
 	    }
 	  },
+	 /* computed:{
+	  	 autoNext:function(){  //自动播放下一首歌曲
+	  	 	return {
+
+	  	  		}
+	  	 }
+	  },*/
 	  mounted:function(){
 	  	  let that = this;
 	  	  document.getElementById("audio").currentTime=localStorage.getItem('currentTime');  //本地取值
-	  	  setInterval(function(){
-  	  		let currentTime = document.getElementById("audio").currentTime; //当前播放进度
-  	  		let totalTime = that.songInf.time;  //当前歌曲总时长
-  	  		//当前播放时间等于当前歌曲总时间时，为播放完毕，此时直接跳下一曲
-  	  		if(parseInt(currentTime) == parseInt(Number(totalTime)/1000) ){
-  	  			that.next()
-  	  		}
-  	  },1000)
+	  	  // setInterval(function(){
+  	  	// 	let currentTime = document.getElementById("audio").currentTime; //当前播放进度
+  	  	// 	let totalTime = that.songInf.time;  //当前歌曲总时长
+  	  	// 	//当前播放时间等于当前歌曲总时间时，为播放完毕，此时直接跳下一曲
+  	  	// 	if(parseInt(currentTime) == parseInt(Number(totalTime)/1000) ){
+  	  	// 		that.next()
+  	  	// 	}
+  	 	 // },1000)
 	  },
 	  methods:{
 	    playPause(){  //暂停播放
@@ -63,7 +70,7 @@
 	    },
 	    Back(){  //返回
 	    	let audio=document.getElementById('audio');
-	    	localStorage.setItem('currentTime',audio.currentTime);//本地存值
+	    	localStorage.setItem('d_currentTime',audio.currentTime);//本地存值
 	    },
 	    Collect(){
 	    	var c=this.collect;

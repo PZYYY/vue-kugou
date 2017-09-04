@@ -2,7 +2,7 @@
 	<div class="r">
 			<!--返回键 搜索栏 -->
 		<div class="top">
-				<router-link to="/index"><mt-button><</mt-button></router-link>
+				<router-link to="/all/index"><mt-button><</mt-button></router-link>
 				<div @keyup.enter="search()" style="width:100%">
 					<mt-search
 					  v-model="value"
@@ -28,15 +28,15 @@
 			  </li>
 			</ul>
 		</div>
-		<All></All>
+		<!-- <All></All> -->
 	</div>
 </template>
 <script>
 	import store from '../store/index'
 	import {api} from '../global/api'
-	import All from './all'
+	// import All from './all'
 	export default{ 
-		components:{ All }, 
+		// components:{ All }, 
 		data(){
 			return{
 				list:{
@@ -174,7 +174,7 @@
      }
      .list ul li{
      	width:100%;
-     	height:3rem;
+     	height:3.5rem;
      	list-style:none;
      	font-size: 1.5rem;
      	color: #000;

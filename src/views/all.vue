@@ -1,8 +1,7 @@
 	
 	<template>
 		<div>
-
-			<!-- <router-view></router-view> -->
+			<router-view></router-view>
 			<!-- 底部播放器 -->
 			<router-link to="/detail">
 			  <div class="bloser">
@@ -23,7 +22,7 @@
 	 	  }
 	 	},
 	 	mounted:function(){
-	 	     document.getElementById("myaudio").currentTime=localStorage.getItem('currentTime')  //本地取值 
+	 	     document.getElementById("myaudio").currentTime=localStorage.getItem('d_currentTime')  //本地取值 
 	 	},
 	 	methods:{
 	 	   detail(){
@@ -31,7 +30,6 @@
 	 	   	  console.log(myaudio.currentTime)
 	 	   	  localStorage.setItem('currentTime',myaudio.currentTime)   //本地存储
 	 	   }
- 	   		
 	 	}
 	 }
 		

@@ -9,9 +9,9 @@
 		<div class="nav">
 	 		<ul>
 	  			    <li>首页</li>
-	  				<router-link to="/rank"><li>排行</li></router-link>
-	  				<router-link to="/songList"><li>歌单</li></router-link>
-	  				<router-link to="/other"><li>其他</li></router-link>
+	  				<router-link to="/all/rank"><li>排行</li></router-link>
+	  				<router-link to="/all/songList"><li>歌单</li></router-link>
+	  				<router-link to="/all/other"><li>其他</li></router-link>
 	  			 </ul>
 		</div>
 		<!-- 轮播 -->
@@ -60,13 +60,13 @@
 		  </router-link>
 		</div>
 		</div>
-		<All></All>
+		<!-- <All></All> -->
 	</div>
 </template>
 <script>
-import All from './all'
+// import All from './all'
 	export default{
-		components:{ All },
+		// components:{ All },
 		data(){
 			return{
 				Rolls:[],//轮播json数据
@@ -142,7 +142,7 @@ import All from './all'
 	   	 width: 100%;
 	   	 height:6%;
 	   	 clear:both;
-	   	 margin-top: 4rem;
+	   	 margin-top:5rem;
    	}
     .nav ul li{
 	   	 width: 22%;
@@ -151,7 +151,7 @@ import All from './all'
 	   	 float: left;
 	   	 font-size: 1.7rem;
 	   	 text-align: center;
-	   	 padding-top:1.4rem;
+	   	 padding-top:1.7rem;
    	} 
    	.Carousel{
    		width: 100%;
@@ -162,22 +162,22 @@ import All from './all'
   		height:25%;
   		} 	
 	.content{width: 100%;
-			 margin-top:60%;
+			 margin-top:62%;
 			 }
 	.local{
 		margin: auto;
 		width:82%;
-		height: 7rem;
+		height: 8.5rem;
 		color: #fff;
 		font-family: "华文彩云";
-		font-size: 3rem;
-		line-height: 7.5rem;
+		font-size: 4rem;
+		line-height:8.5rem;
 		background:rgba(0,0,0,0.6);
 	}
 	.local img{
-		width:3.8rem;
+		width:5rem;
 		padding-top:1.8rem;
-		padding-left:6rem;
+		padding-left:4rem;
 		float: left;
 	}
 	.local span{
@@ -185,26 +185,26 @@ import All from './all'
 	}
 	.local2{
 		width:100%;
-		height: 4rem;
+		height: 5rem;
 		text-align: center;
 		margin: auto;
-		padding-left: 10%;
+		padding-left: 9%;
 	}
 	.lo2{
 			margin-top: 1rem;
 			margin-right:1.6rem;
-			width:38%;
-			height:4rem;
+			width:39%;
+			height:5rem;
 			color: #fff;
 			font-family: "华文彩云";
-			font-size: 2rem;
-			line-height: 4rem;
+			font-size: 2.3rem;
+			line-height: 5rem;
 			background:rgba(0,0,0,0.6);
 			float: left;
 		}
 	.lo2 img{
-		width:1.5rem;
-		padding-top:1.2rem;
+		width:1.8rem;
+		padding-top:1.5rem;
 		padding-left:1.5rem;
 		float: left;
 	}

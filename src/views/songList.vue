@@ -8,10 +8,10 @@
 			</div>
 			<div class="nav">
 				 <ul>
-				 	<router-link to="/index"><li>首页</li></router-link>
-					<router-link to="/rank"><li>排行</li></router-link>
+				 	<router-link to="/all/index"><li>首页</li></router-link>
+					<router-link to="/all/rank"><li>排行</li></router-link>
 					<li>歌单</li>
-					<router-link to="/other"><li>其他</li></router-link>
+					<router-link to="/all/other"><li>其他</li></router-link>
 				 </ul>
 			</div>
 			<div  @keyup.enter="search()">
@@ -37,15 +37,15 @@
 			  </li>
 			</ul>
 		</div>
-		<All></All>
+		<!-- <All></All> -->
 	</div> 
 </template>
 <script>
  import store from '../store/index'
  import {api} from '../global/api'
- import All from './all'
+ // import All from './all'
  export default{
- 	components:{ All }, 
+ 	// components:{ All }, 
 	data(){
 		return{
 			list:{
@@ -141,7 +141,6 @@
     .c{ 
     	width: 100%;
     	position: fixed;
-
     }
 	.top{
 		width: 100%;
@@ -162,9 +161,11 @@
 	   margin-right:5%;
 	   font-family:"华文行楷";
 	}
-	.nav{width:100%;
+	.nav{
+		 width:100%;
 		 padding-top: 0.1rem;
-		 clear:both;	
+		 clear:both;
+		 margin-top:0.5rem;	
 		}
 	.nav ul li{
 		width:18%;
@@ -178,7 +179,6 @@
 	.mint-search {clear: both;
 				  height: 7%;}
 	.list{
-		   /*margin-top:-0.3rem;*/
 		   padding-left: 4%;
 		   padding-right:8%;
 		   padding-top: 38%;
@@ -195,8 +195,8 @@
 		padding:0px;
 	}
 	.list ul li{
-			width:100%;
-     	height:3rem;
+		width:100%;
+     	height:3.5rem;
      	list-style:none;
      	font-size: 1.5rem;
      	color: #000;

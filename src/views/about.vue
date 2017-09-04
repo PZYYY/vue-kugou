@@ -3,7 +3,7 @@
 	  <!-- 头部 -->
 		<div class="c">
 			<div class="top">
-				<router-link to="/index"><span><</span></router-link>
+				<router-link to="/all/index"><span><</span></router-link>
 				<!-- <span><</span> -->
 				<p>About薛之谦</p>
 			</div>
@@ -40,7 +40,7 @@
 
 }
 .content{
-	padding:14rem 1rem 0rem 1rem;
+	padding:15rem 1rem 0rem 1rem;
 	text-align:left;
 }
 div:nth-of-type(1){  /* 选择相同元素的第一个 */
